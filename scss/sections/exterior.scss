@@ -1,0 +1,70 @@
+.exterior {
+    .section__title {
+        font-size: 0.7em;
+        @media (min-width: 768px) {
+            font-size: 0.6em;
+        }
+    }
+    position: relative;
+    padding: 2.5em 0 6em;
+
+    @media (min-width: 768px) {
+        padding: 8.875em 0 12.875em;
+
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+
+        margin: 0 auto;
+        padding: 3em 1.5em 4.25em;
+
+        background-color: $color_white;
+
+        @media (min-width: 768px) {
+            width: 44.375em;
+            padding: 6.25em 5.9375em;
+
+        }
+
+    }
+
+    &__info {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 2.25em;
+
+        }
+
+        span {
+            font-size: 0.875em;
+            color: $color_primary;
+        }
+
+        b {
+            font-weight: 600;
+            color: $main_color;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: -3.0625em;
+        left: 50%;
+        transform: translateX(-50%);
+        @media (min-width: 768px) {
+            bottom: -4.0625em;
+
+        }
+    }
+
+}

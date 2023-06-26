@@ -1,0 +1,72 @@
+.notfound {
+    // padding: 0;
+    padding: 10em 0;
+
+    .section__title {
+        font-family: $numbers_font_family;
+
+        span {
+            font-size: 6em;
+            line-height: 0.9;
+            @media (min-width: 768px) {
+                font-size: 8.75em;
+            }
+
+            &:last-child {
+                display: inline-block;
+                transform: translateY(-0.125em);
+                margin-left: 0.2em;
+            }
+        }
+    }
+
+    .container_center {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    height: 100vh;
+    position: relative;
+    background-color: $main_color;
+    color: $color_white;
+
+    &__img {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 52.75em;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 768px) {
+            width: 22em;
+            margin-left: 6.5em;
+        }
+    }
+
+    &__info {
+        font-size: 0.875em;
+        text-align: center;
+        margin-top: 1.25em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            margin-top: 2.5em;
+            width: 20em;
+        }
+    }
+
+    &__btn {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 2.875em;
+        }
+    }
+}

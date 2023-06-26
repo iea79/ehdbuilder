@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Alokary';
+    src: url('Alokary-PersonalUse.eot');
+    src: url('Alokary-PersonalUse.eot?#iefix') format('embedded-opentype'),
+        url('Alokary-PersonalUse.woff2') format('woff2'),
+        url('Alokary-PersonalUse.woff') format('woff'),
+        url('Alokary-PersonalUse.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

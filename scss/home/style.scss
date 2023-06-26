@@ -1,0 +1,110 @@
+.home {
+    // overflow: hidden;
+
+    @media (min-width: 768px) {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .header {
+        @media (min-width: 768px) {
+            padding: 0;
+            border: 0;
+            .header__logo {
+                display: none;
+            }
+        }
+
+        .header__content {
+            display: none;
+        }
+    }
+
+    .footer {
+        text-align: left;
+
+        @media (min-width: 768px) {
+            width: 47.25em;
+            font-size: 1.3em;
+            text-align: center;
+        }
+        .container_center {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &.section {
+            @media (min-width: 768px) {
+                padding: 4.8em;
+            }
+        }
+
+        &__top {
+            // display: none;
+            padding: 0;
+        }
+
+        &__bottom {
+            // display: none;
+            background-color: transparent;
+            color: #607076;
+            margin-bottom: 3em;
+
+            @media (min-width: 768px) {
+                margin-top: 2em;
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .messenger__list {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .main_content {
+        @media (min-width: 768px) {
+            min-height: 0;
+        }
+    }
+
+    .btn {
+        // font-weight: 600;
+        font-size: 1em;
+
+        @media (min-width: 768px) {
+            font-size: 1.3em;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        span {
+            width: auto;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 0;
+
+            &:after {
+                margin-left: 1em;
+                position: static;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    h2.section__title {
+        font-size: 1.375em;
+
+        @media (min-width: 768px) {
+            font-size: 2.8em;
+        }
+    }
+}

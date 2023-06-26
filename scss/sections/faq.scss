@@ -1,0 +1,30 @@
+.faq {
+    background-color: $main_color;
+    color: $color_white;
+    @media (min-width: 768px) {
+        position: relative;
+        min-height: 57.375em;
+    }
+
+    &__img {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 60.625em;
+        }
+    }
+
+    &__content {
+        border-top: 1px solid rgba($color_white, 0.2);
+        margin-top: 1.5em;
+        padding-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 3.5em;
+            padding-top: 2em;
+            width: 23.375em;
+        }
+    }
+
+}

@@ -1,0 +1,26 @@
+.homePage {
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .section {
+        padding: 5em 1.2em 0;
+
+        @media (min-width: 768px) {
+            padding: 0;
+            flex: none;
+            height: 100vh;
+            min-width: 0;
+            user-select: none;
+        }
+    }
+
+    img {
+        user-select: none;
+        pointer-events: none;
+    }
+}

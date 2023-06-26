@@ -1,0 +1,51 @@
+.messenger {
+    &__list,
+    .menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item,
+    .menu-item {
+        margin: 0 0.375em;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 2.625em;
+        height: 2.625em;
+        border: 1px solid;
+        border-color: $main_color;
+        border-radius: 100%;
+
+        color: $main_color;
+        background-color: $color_white;
+        text-decoration: none;
+
+        span {
+            display: none;
+        }
+
+        i {
+            font-size: 0.875em;
+            margin: 0 !important;
+        }
+
+        .icon_yelp {
+            font-size: 1em;
+        }
+
+        &:hover {
+            color: $color_white;
+            background-color: $color_info;
+            border-color: $color_info;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.runningLine {
+    background-color: $main_color;
+    padding-bottom: 0.5em;
+    @media (min-width: 768px) {
+        padding-bottom: 0.875em;
+
+    }
+
+    &__content {
+        overflow: hidden;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 600;
+            color: $color_white;
+
+            font-size: 0.75em;
+            @media (min-width: 768px) {
+                font-size: 0.875em;
+            }
+        }
+    }
+
+    &__sep {
+        display: inline-block;
+        margin: 0 0.5em;
+        @media (min-width: 768px) {
+            margin: 0 1.25em;
+
+        }
+    }
+
+    .js-marquee {
+        margin-right: 0!important;
+    }
+
+}

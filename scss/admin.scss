@@ -1,0 +1,42 @@
+.toplevel_page_our-contacts {
+    .form-table {
+        th {
+            font-weight: 600;
+            &[scope='row'] {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu-edit {
+    input[id='menu'][value='5'] {
+        + #nav-menu-header {
+            + #post-body {
+                .menu-icons-wrap {
+                    .submitbox {
+                        display: flex;
+                        align-items: start;
+                        gap: 8px;
+
+                        > label {
+                            font-size: 0;
+                            line-height: 27px;
+                            &:after {
+                                content: 'Image';
+                                font-size: 13px;
+                            }
+                        }
+                        ._select {
+                            img {
+                                max-width: none;
+                                width: 150px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

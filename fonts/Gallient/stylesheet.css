@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Gallient';
+    src: url('Gallient-Regular.eot');
+    src: url('Gallient-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Gallient-Regular.woff2') format('woff2'),
+        url('Gallient-Regular.woff') format('woff'),
+        url('Gallient-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

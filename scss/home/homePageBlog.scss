@@ -1,0 +1,105 @@
+.homePageBlog {
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &.section {
+        @media (min-width: 768px) {
+            padding: 6em 8.75em;
+        }
+
+        @media (max-width: 767px) {
+            padding-bottom: 5em;
+        }
+    }
+    &__content {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__list {
+        display: flex;
+        margin: 3em -1.2em 0 -1.2em;
+        padding-right: 1.2em;
+        overflow-x: auto;
+
+        @media (min-width: 768px) {
+            margin: 3.375em 5em 0 -1.25em;
+            padding-right: 0;
+            overflow-x: inherit;
+        }
+    }
+    &__item {
+        flex: none;
+        width: 18em;
+        padding-left: 1.25em;
+
+        @media (min-width: 768px) {
+            width: 25.625em;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 13em;
+        margin-bottom: 1em;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            margin-bottom: 2.125em;
+            height: 19.125em;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: transform 1s;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__descr {
+    }
+    &__name {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    &__text {
+        color: #607076;
+        font-size: 0.9em;
+        line-height: 1.4;
+        max-width: 21em;
+
+        p {
+            margin: 0.7em 0;
+        }
+    }
+    &__more {
+        font-size: 0.9em;
+        color: #159aa3;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-style: italic;
+    }
+    &__btn {
+        padding-top: 2em;
+
+        @media (min-width: 768px) {
+            padding-top: 4.5em;
+        }
+        .btn {
+        }
+    }
+}

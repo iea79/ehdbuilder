@@ -1,0 +1,208 @@
+.homePageTeam {
+    @media (min-width: 768px) {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .section {
+        &__title {
+            @media (max-width: 767px) {
+                max-width: 13em;
+            }
+        }
+        &__sub {
+            color: #607076;
+            line-height: 1.4;
+            text-align: justify;
+
+            @media (min-width: 768px) {
+                margin: 2.5625em 0 2.3125em;
+            }
+        }
+    }
+
+    &.section {
+        @media (max-width: 767px) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            padding: 3em 8.75em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            max-width: 100%;
+        }
+    }
+
+    &__left {
+        margin-bottom: 2em;
+
+        @media (min-width: 768px) {
+            flex: none;
+            width: 24.5em;
+            margin-right: 5.5em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        @media (min-width: 768px) {
+            flex-grow: 1;
+            min-width: 0;
+            display: flex;
+        }
+    }
+
+    &__slider {
+        max-width: 100%;
+
+        &Actions {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: -8.4em;
+            // font-size: 0.9em;
+
+            @media (min-width: 768px) {
+                font-size: 1em;
+                position: static;
+                margin-left: 4em;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__slide {
+        width: 30.5625em;
+    }
+
+    &__img {
+        width: 100%;
+        height: 21em;
+        margin-bottom: 1.375em;
+        // max-width: 100%;
+
+        @media (min-width: 768px) {
+            font-size: 1.3em;
+            height: 29.3125em;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__name {
+        font-weight: 600;
+        margin-bottom: 0.25em;
+        line-height: 1.4;
+        text-transform: uppercase;
+        color: #006083;
+
+        @media (min-width: 768px) {
+            opacity: 0;
+        }
+    }
+    &__descr {
+        font-size: 0.95em;
+        line-height: 1.4;
+        text-align: justify;
+        letter-spacing: 0.04em;
+        color: #607076;
+
+        @media (min-width: 768px) {
+            opacity: 0;
+        }
+
+        p {
+            @media (max-width: 767px) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .swiper {
+        display: flex;
+        max-width: 100%;
+
+        &-wrapper {
+            // flex-grow: 1;
+            // min-width: 0;
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        flex: none;
+        position: static;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #006083;
+        border: 1px solid;
+        margin: 0;
+        transition: 0.7s;
+        transition-property: color, background;
+
+        @media (min-width: 768px) {
+            transform: rotate(90deg);
+        }
+
+        &::after {
+            font-size: 0.7em;
+        }
+
+        &:hover {
+            background: #006083;
+            color: #fff;
+        }
+    }
+    .swiper-pagination {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        margin: 0.5em;
+
+        @media (min-width: 768px) {
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .swiper-pagination-bullet {
+            display: block;
+            margin: 0.3em !important;
+            background-color: rgba(217, 217, 217, 0.5);
+            opacity: 1;
+            transition: background 0.7s;
+            font-size: 0.5em;
+
+            @media (min-width: 768px) {
+                font-size: 1em;
+                margin: 0.4em !important;
+            }
+
+            &-active {
+                background-color: #159aa3;
+            }
+        }
+    }
+    .swiper-button-prev {
+    }
+    .swiper-button-next {
+    }
+}

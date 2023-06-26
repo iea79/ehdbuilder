@@ -1,0 +1,72 @@
+// Style for button and pseudo button for input and link
+
+.btn,
+div.wpforms-container-full .wpforms-submit-container button[type='submit'].wpforms-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 8.125em;
+    height: 8.125em;
+    border-radius: 100%;
+
+    border: none;
+    outline: none;
+    max-width: 100%;
+
+    font-family: $main_font_family;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+
+    color: $color_white;
+    background-color: $color_info;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    font-size: 0.75em;
+    @media (min-width: 768px) {
+        font-size: 1em;
+    }
+
+    span {
+        position: relative;
+        display: inline-block;
+        font-size: 0.75em;
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-right: 2em;
+        width: 6em;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-44%);
+            right: -2.5em;
+
+            content: '\e905';
+            font-family: 'icomoon';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.8em;
+            margin-left: 1.75em;
+        }
+    }
+
+    &:hover {
+        background-color: darken($color_info, 2%);
+    }
+
+    &:active {
+        background-color: $color_info;
+    }
+
+    &:disabled {
+        background-color: darken($color_info, 5%);
+        cursor: not-allowed;
+        // pointer-events: none;
+    }
+}

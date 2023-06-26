@@ -1,0 +1,38 @@
+.aside {
+    &__item {}
+
+    &__title {
+        span {
+            font-size: 1.125em;
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+
+    &__list {
+
+        padding: 0;
+        list-style: none;
+
+        color: #77858A;
+
+        margin: 1.25em 0 0;
+        @media (min-width: 768px) {
+            margin: 1.875em 0 0;
+
+        }
+
+        li {
+            margin-bottom: 0.75em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        span {
+            font-size: 1.125em;
+            font-weight: 400;
+        }
+    }
+}

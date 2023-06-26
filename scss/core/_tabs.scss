@@ -1,0 +1,52 @@
+.tabs {
+    display: flex;
+
+    @media (max-width: 767px) {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+    }
+
+}
+
+.tab {
+    position: relative;
+    width: fit-content;
+    flex: none;
+    text-transform: uppercase;
+
+    span {
+        display: inline-block;
+        font-size: 0.75em;
+        font-weight: 600;
+
+        padding: 0.91667em 1.333334em 1.083334em;
+
+        color: #9DAFB5;
+        background-color: transparent;
+
+        border-top-left-radius: 0.833334em;
+        border-top-right-radius: 0.833334em;
+        border: 0.0625em solid;
+        border-color: #9DAFB5;
+
+        transition: 0.3s;
+
+        cursor: pointer;
+    }
+
+    &:hover {
+        span {
+            color: $color_white;
+        }
+    }
+
+    &.active {
+        span {
+            background-color: $color_white;
+            border-color: $color_white;
+            color: $main_color;
+
+        }
+    }
+}

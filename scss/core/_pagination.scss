@@ -1,0 +1,46 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.0625em solid #eaeaea;
+    padding: 1.25em 0;
+
+    @media (min-width: 768px) {
+        padding: 2.5em 0;
+        margin-left: 2.5em;
+    }
+
+    .nav-links > * {
+        display: inline-block;
+        line-height: 1;
+
+        color: rgba(#9eb5bd, 0.5);
+
+        text-decoration: none;
+
+        transition: 0.3s;
+
+        cursor: pointer;
+        text-transform: uppercase;
+        margin: 0 1.11112em;
+        font-weight: 600;
+        font-size: 1.125em;
+
+        &.dots {
+            border: 0;
+        }
+
+        &:hover {
+            color: $main_color;
+
+            &.dots {
+                color: rgba(#9eb5bd, 0.5);
+                cursor: default;
+            }
+        }
+
+        &.current {
+            color: $main_color;
+        }
+    }
+}

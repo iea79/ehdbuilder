@@ -1,0 +1,117 @@
+.head {
+    position: relative;
+    overflow: hidden;
+
+    background-color: $main_color;
+    color: $color_white;
+    padding: 0;
+
+    .section__title {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 1.5em;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        // @media (min-width: 768px) {
+        //     width: 115em;
+        // }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        min-height: 14em;
+        padding: 2em 0;
+
+        @media (min-width: 768px) {
+            min-height: 41.875em;
+            padding: 6.875em 0;
+        }
+    }
+
+    // start head_sm
+    &_sm {
+        .section__title {
+            @media (min-width: 768px) {
+                margin-top: 2em;
+            }
+        }
+
+        .head__img {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+                width: 51.875em;
+            }
+        }
+
+        .head__content {
+            text-align: center;
+            min-height: auto;
+            @media (min-width: 768px) {
+                width: 41em;
+                min-height: 43.75em;
+                padding: 5em 0 9.375em;
+            }
+        }
+
+        .head__preview {
+            width: 12.625em;
+            height: 12.625em;
+            border-radius: 0.625em;
+            margin: 5em auto 0;
+            overflow: hidden;
+
+            font-size: 0.5em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    // end head_sm
+
+    // start testimonials
+
+    &_testimonials {
+        .head__img {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+                width: 52.5em;
+            }
+        }
+
+        .head__content {
+            min-height: auto;
+            @media (min-width: 768px) {
+                width: 40em;
+                padding: 17.25em 0 11.875em;
+            }
+        }
+    }
+
+    // end testimonials
+}
