@@ -2,10 +2,8 @@ const ourteam = new Swiper('.swiper_ourteam_js', {
     slidesPerView: 1,
     spaceBetween: 10,
     speed: 500,
-    loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    rewind: true,
+    autoplay: true,
 
     navigation: {
         nextEl: '.ourteam .icon_arrow_right',
@@ -18,11 +16,11 @@ const ourteam = new Swiper('.swiper_ourteam_js', {
     breakpoints: {
         768: {
             spaceBetween: 20,
-            slidesPerView: 3,
+            // slidesPerView: 3,
 
             pagination: {
                 el: '.dotted_ourteam_js',
-                // clickable: true,
+                clickable: true,
             },
         },
     },

@@ -22,7 +22,7 @@
             flex-direction: column;
             justify-content: center;
             width: 35em;
-            padding: 7.5em;
+            padding: 5.5em 7.5em;
         }
     }
     &__list {
@@ -94,7 +94,7 @@
         @media (min-width: 768px) {
             flex: none;
             width: 41.25em;
-            padding: 5.75em 6em;
+            padding: 3.75em 6em;
             margin: 0;
         }
     }

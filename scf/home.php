@@ -176,6 +176,11 @@ function home_project_section_fields($settings, $type, $id, $meta_type, $types)
 					'label'       => 'Project name',
 					'type'        => 'text',
 				),
+				array(
+					'name'        => 'project__link',
+					'label'       => 'Project link',
+					'type'        => 'text',
+				),
 			)
 		);
 

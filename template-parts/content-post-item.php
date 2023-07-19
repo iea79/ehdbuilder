@@ -38,7 +38,7 @@
 			<div class="blog__excerpt"><span><?php the_excerpt() ?></span></div>
 		</div>
 		<div class="blog__right">
-			<div class="blog__btn"><a class="btn" href="#"><span>READ more</span></a></div>
+			<div class="blog__btn"><a class="btn" href="<?php the_permalink() ?>"><span>READ more</span></a></div>
 			<div class="blog__time"><i class="icon_time"></i><span><?php reading_time(get_the_ID()) ?></span></div>
 			<div class="blog__date"><span><?php echo get_the_date('M d, Y') ?></span></div>
 		</div>

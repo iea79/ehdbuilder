@@ -118,91 +118,115 @@ if (SCF::get('materials__title')) {
 <?php
 }
 
-if (SCF::get('steps__title')) {
+if (SCF::get('steps__title') || SCF::get('steps__3_title') || SCF::get('steps__process_title') || SCF::get('steps__gallery_title')) {
 ?>
 	<!-- begin projects-->
 	<section class="projects section" id="projects">
 		<div class="container_center counter-wrap">
-			<div class="projects__row counter-item">
-				<div class="projects__preview">
-					<div class="projects__left">
-						<h2 class="section__title"><span><?php echo SCF::get('steps__title'); ?></span></h2>
-						<div class="projects__img img desktop">
-							<?php echo wp_get_attachment_image(SCF::get('steps__photo'), 'full') ?>
-						</div>
-					</div>
-					<div class="projects__right">
-						<div class="projects__img img">
-							<?php echo wp_get_attachment_image(SCF::get('steps__1_photo'), 'full') ?>
-						</div>
-						<div class="projects__title"><span><?php echo SCF::get('steps__1_title'); ?></span><small class="counter-el"></small></div>
-						<div class="projects__text"><span><?php echo SCF::get('steps__1_text'); ?></span></div>
-					</div>
-				</div>
-			</div>
-			<div class="projects__row counter-item">
-				<div class="projects__grid">
-					<div class="projects__title"><span><?php echo SCF::get('steps__3_title'); ?></span><small class="counter-el"></small></div>
-					<div class="projects__list">
-						<?php
-						$steps_materials = SCF::get('steps_materials');
-
-						foreach ($steps_materials as $item) {
-						?>
-							<div class="projects__item">
-								<div class="projects__img img"><?php echo wp_get_attachment_image($item['steps__materials_photo'], 'full') ?></div>
-								<div class="projects__label"><span><?php echo $item['steps__materials_name'] ?></span></div>
+			<?php
+			if (SCF::get('steps__title')) {
+			?>
+				<div class="projects__row counter-item">
+					<div class="projects__preview">
+						<div class="projects__left">
+							<h2 class="section__title"><span><?php echo SCF::get('steps__title'); ?></span></h2>
+							<div class="projects__img img desktop">
+								<?php echo wp_get_attachment_image(SCF::get('steps__photo'), 'full') ?>
 							</div>
-						<?php
-						};
-						?>
-					</div>
-				</div>
-			</div>
-			<div class="projects__row counter-item">
-				<div class="projects__about">
-					<div class="projects__left">
-						<div class="projects__title"><span><?php echo SCF::get('steps__process_title'); ?></span><small class="counter-el"></small></div>
-						<div class="projects__text"><span><?php echo SCF::get('steps__process_text'); ?></span></div>
-						<div class="projects__img img">
-							<?php echo wp_get_attachment_image(SCF::get('steps__process_photo_small'), 'full') ?>
+						</div>
+						<div class="projects__right">
+							<div class="projects__img img">
+								<?php echo wp_get_attachment_image(SCF::get('steps__1_photo'), 'full') ?>
+							</div>
+							<div class="projects__title"><span><?php echo SCF::get('steps__1_title'); ?></span><small class="counter-el"></small></div>
+							<div class="projects__text"><span><?php echo SCF::get('steps__1_text'); ?></span></div>
 						</div>
 					</div>
-					<div class="projects__right desktop">
-						<div class="projects__img img"><?php echo wp_get_attachment_image(SCF::get('steps__process_photo'), 'full') ?></div>
-					</div>
 				</div>
-			</div>
-			<div class="projects__row counter-item">
-				<div class="projects__slider">
-					<div class="projects__title"><span><?php echo SCF::get('steps__gallery_title'); ?></span><small class="counter-el"></small></div>
-					<div class="swiper swiper_projects_js">
-						<div class="swiper-wrapper">
+			<?php
+			}
+			?>
+			<?php
+			if (SCF::get('steps__3_title')) {
+			?>
+				<div class="projects__row counter-item">
+					<div class="projects__grid">
+						<div class="projects__title"><span><?php echo SCF::get('steps__3_title'); ?></span><small class="counter-el"></small></div>
+						<div class="projects__list">
 							<?php
-							$steps_gallery = SCF::get('steps_gallery');
+							$steps_materials = SCF::get('steps_materials');
 
-							foreach ($steps_gallery as $item) {
+							foreach ($steps_materials as $item) {
 							?>
-								<div class="swiper-slide">
-									<div class="projects__slide">
-										<div class="projects__img img">
-											<?php echo wp_get_attachment_image($item['steps__gallery_photo'], 'full') ?>
-											<div class="projects__category"><span><?php echo $item['steps__gallery_cat'] ?></span></div>
-										</div>
-										<div class="projects__location"><span><?php echo $item['steps__gallery_name'] ?></span></div>
-										<div class="projects__text"><span><?php echo $item['steps__gallery_text'] ?></span></div>
-									</div>
+								<div class="projects__item">
+									<div class="projects__img img"><?php echo wp_get_attachment_image($item['steps__materials_photo'], 'full') ?></div>
+									<div class="projects__label"><span><?php echo $item['steps__materials_name'] ?></span></div>
 								</div>
 							<?php
 							};
 							?>
 						</div>
 					</div>
-					<div class="swiper__arrows desktop"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
-					<div class="swiper__dotted projects_dotted_js mobile"></div>
 				</div>
-				<div class="projects__btn"><a class="btn" href="<?php echo SCF::get('steps__btn_link'); ?>"><span><?php echo SCF::get('steps__btn'); ?></span></a></div>
-			</div>
+			<?php
+			}
+			?>
+			<?php
+			if (SCF::get('steps__process_title')) {
+			?>
+				<div class="projects__row counter-item">
+					<div class="projects__about">
+						<div class="projects__left">
+							<div class="projects__title"><span><?php echo SCF::get('steps__process_title'); ?></span><small class="counter-el"></small></div>
+							<div class="projects__text"><span><?php echo SCF::get('steps__process_text'); ?></span></div>
+							<div class="projects__img img">
+								<?php echo wp_get_attachment_image(SCF::get('steps__process_photo_small'), 'full') ?>
+							</div>
+						</div>
+						<div class="projects__right desktop">
+							<div class="projects__img img"><?php echo wp_get_attachment_image(SCF::get('steps__process_photo'), 'full') ?></div>
+						</div>
+					</div>
+				</div>
+			<?php
+			}
+			?>
+			<?php
+			if (SCF::get('steps__gallery_title')) {
+			?>
+				<div class="projects__row counter-item">
+					<div class="projects__slider">
+						<div class="projects__title"><span><?php echo SCF::get('steps__gallery_title'); ?></span><small class="counter-el"></small></div>
+						<div class="swiper swiper_projects_js">
+							<div class="swiper-wrapper">
+								<?php
+								$steps_gallery = SCF::get('steps_gallery');
+
+								foreach ($steps_gallery as $item) {
+								?>
+									<div class="swiper-slide">
+										<div class="projects__slide">
+											<div class="projects__img img">
+												<?php echo wp_get_attachment_image($item['steps__gallery_photo'], 'full') ?>
+												<div class="projects__category"><span><?php echo $item['steps__gallery_cat'] ?></span></div>
+											</div>
+											<div class="projects__location"><span><?php echo $item['steps__gallery_name'] ?></span></div>
+											<div class="projects__text"><span><?php echo $item['steps__gallery_text'] ?></span></div>
+										</div>
+									</div>
+								<?php
+								};
+								?>
+							</div>
+						</div>
+						<div class="swiper__arrows desktop"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
+						<div class="swiper__dotted projects_dotted_js mobile"></div>
+					</div>
+					<div class="projects__btn"><a class="btn" href="<?php echo SCF::get('steps__btn_link'); ?>"><span><?php echo SCF::get('steps__btn'); ?></span></a></div>
+				</div>
+			<?php
+			}
+			?>
 		</div>
 	</section>
 	<!-- end projects-->

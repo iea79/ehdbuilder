@@ -72,10 +72,13 @@
                     <div class="swiper-wrapper">
                         <?php
                         // global $post;
+                        $team_ids = SCF::get('team__members');
+
                         $allteams = get_posts([
                             'numberposts' => -1,
                             'post_type'   => 'teams',
-                            'order'       => 'ASC',
+                            'include'     => $team_ids,
+                            'orderby'     => 'post__in',
                         ]);
 
                         if ($allteams) {
@@ -156,7 +159,9 @@
                         }
                         ?>
                         <div class="homePageProjects__item">
-                            <div class="homePageProjects__image"><?php echo wp_get_attachment_image($item['project__img'], 'full') ?></div>
+                            <a href="<?php echo $item['project__link'] ?>" target="_blank" class="homePageProjects__image">
+                                <?php echo wp_get_attachment_image($item['project__img'], 'full') ?>
+                            </a>
                             <div class="homePageProjects__bottom">
                                 <div class="homePageProjects__name"><?php echo $item['project__name'] ?></div>
                                 <div class="homePageProjects__count"><?php echo '0' . ($key + 1) ?></div>

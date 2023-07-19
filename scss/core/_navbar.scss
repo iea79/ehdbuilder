@@ -20,6 +20,11 @@
             width: 28.125em;
             flex: none;
         }
+
+        @media (max-width: 767px) {
+            overflow-y: auto;
+            max-height: 100vh;
+        }
         .menu {
             counter-reset: line var(--line-num, 0);
             margin: 0;
