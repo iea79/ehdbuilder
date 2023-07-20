@@ -1,18 +1,20 @@
 let firstScreenImageWidth;
+// const percentWrap = document.querySelector('.loader__percent');
 
-window.onload = () => {
-    const loader = document.querySelector('.loader');
-    const tl = gsap.timeline({ duration: 0.3 });
-    tl.to(loader, {
-        opacity: 0,
-    });
-    tl.to(loader, {
-        yPercent: -100,
-    });
-};
+// function showLoader() {
+//     loaderInterval = setInterval(() => {
+//         if (loaderPercent <= 100) {
+//             percentWrap.innerHTML = loaderPercent + '%';
+//             loaderPercent++;
+//         } else {
+//             loaderPercent = 0;
+//         }
+//     }, 50);
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
     // console.log('isMobile', isXsWidth());
+    // showLoader();
     if (!isXsWidth()) {
         startFirstAnimations();
         initHorizontalScroll();
@@ -29,9 +31,18 @@ async function startFirstAnimations() {
     const left = gsap.utils.toArray('.homePageFirst__left');
     const right = gsap.utils.toArray('.homePageFirst__right');
     const image = document.querySelector('.homePageFirst__image');
+    const loader = document.querySelector('.loader');
     firstScreenImageWidth = image.offsetWidth;
-    // console.log(firstScreenImageWidth);
     let tl = gsap.timeline({ duration: 0, delay: 0 });
+
+    percentWrap.innerHTML = '100%';
+    clearInterval(loaderInterval);
+    tl.to(loader, {
+        opacity: 0,
+    });
+    tl.to(loader, {
+        yPercent: -100,
+    });
     tl.fromTo(nav, { duration: 0.7, x: -nav.offsetWidth }, { x: 0 });
     tl.from(left, { width: 0, duration: 1.5, opacity: 0 });
     tl.from(right, { width: 0, opacity: 0 });

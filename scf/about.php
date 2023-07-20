@@ -85,7 +85,7 @@ function page_about_team_section_fields($settings, $type, $id, $meta_type, $type
 					'name'        => 'team__ids',
 					'label'       => 'Team users',
 					'post-type'   => array('teams'),
-					'limit'       => 10,
+					'limit'       => 0,
 				),
 			)
 		);

@@ -1,5 +1,26 @@
 <div class="loader">
-    <div class="loader__el"></div>
+    <!-- <div class="loader__el"></div> -->
+    <div class="loader__top">Building <br>homes and trust </div>
+    <div class="loader__img">
+        <img src="<?php echo get_template_directory_uri() . '/img/loader.png' ?>" alt="loading">
+    </div>
+    <div class="loader__percent">0%</div>
+    <script>
+        let loaderInterval,
+            loaderPercent = 0;
+        const percentWrap = document.querySelector('.loader__percent');
+
+        // function showLoader() {
+        loaderInterval = setInterval(() => {
+            if (loaderPercent <= 100) {
+                percentWrap.innerHTML = loaderPercent + '%';
+                loaderPercent++;
+            } else {
+                loaderPercent = 0;
+            }
+        }, 50);
+        // }
+    </script>
 </div>
 <div class="homePage">
 
