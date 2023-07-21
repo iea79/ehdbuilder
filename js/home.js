@@ -1,16 +1,6 @@
 let firstScreenImageWidth;
-// const percentWrap = document.querySelector('.loader__percent');
 
-// function showLoader() {
-//     loaderInterval = setInterval(() => {
-//         if (loaderPercent <= 100) {
-//             percentWrap.innerHTML = loaderPercent + '%';
-//             loaderPercent++;
-//         } else {
-//             loaderPercent = 0;
-//         }
-//     }, 50);
-// }
+disableNativeMouseWheel();
 
 document.addEventListener('DOMContentLoaded', () => {
     // console.log('isMobile', isXsWidth());
@@ -25,6 +15,28 @@ document.addEventListener('DOMContentLoaded', () => {
     faqListToggle();
 });
 
+function disableNativeMouseWheel() {
+    let supportsPassive = false;
+    try {
+        window.addEventListener(
+            'test',
+            null,
+            Object.defineProperty({}, 'passive', {
+                get: function () {
+                    supportsPassive = true;
+                },
+            })
+        );
+    } catch (e) {}
+    let wheelOpt = supportsPassive ? { passive: false } : false;
+    let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+    function preventDefault(e) {
+        e.preventDefault();
+    }
+    window.addEventListener('DOMMouseScroll', preventDefault, false);
+    window.addEventListener(wheelEvent, preventDefault, wheelOpt);
+}
+
 async function startFirstAnimations() {
     document.body.style.overflow = 'hidden';
     const nav = document.querySelector('.navbar__wrap');
@@ -34,6 +46,7 @@ async function startFirstAnimations() {
     const loader = document.querySelector('.loader');
     firstScreenImageWidth = image.offsetWidth;
     let tl = gsap.timeline({ duration: 0, delay: 0 });
+    window.scrollTo({ top: 0 });
 
     percentWrap.innerHTML = '100%';
     clearInterval(loaderInterval);
@@ -61,14 +74,15 @@ function initHorizontalScroll() {
 
     let sections = gsap.utils.toArray('.section');
     let dragRatio = 1;
-    let scrollTo;
     let middleWidth = 0;
+    let fullWidth = 0;
+    let isScrolling = false;
 
     document.querySelectorAll('.section').forEach((el) => {
-        middleWidth += el.offsetWidth;
+        fullWidth += el.offsetWidth;
     });
 
-    middleWidth = middleWidth - window.innerWidth;
+    middleWidth = fullWidth - window.innerWidth;
 
     let scrollTween = gsap.to(sections, {
         x: -middleWidth,
@@ -88,20 +102,45 @@ function initHorizontalScroll() {
         },
     });
 
+    let scrollTo = gsap.quickTo(scrollTween.scrollTrigger, 'scroll', {
+        duration: 1,
+        ease: 'power3',
+    });
+
+    let startWheel = scrollTween.scrollTrigger.scroll();
+
     Observer.create({
         target: '.homePage',
+        // type: 'wheel',
         type: 'wheel,touch,pointer',
         onPress: (self) => {
-            self.startScroll = scrollTween.scrollTrigger.scroll();
-            scrollTo = gsap.quickTo(scrollTween.scrollTrigger, 'scroll', {
-                duration: 0.8,
-                ease: 'power3',
-            });
+            updateStartPosition(self);
         },
         onDrag: (self) => {
             scrollTo(self.startScroll + (self.startX - self.x) * dragRatio);
         },
+        onChange: (self) => {
+            updateStartPosition(self);
+        },
+        onStop: (self) => {
+            updateStartPosition(self);
+            startWheel = self.startScroll;
+            isScrolling = false;
+        },
+        onWheel: (self) => {
+            const { deltaY } = self;
+            if (!isScrolling) {
+                scrollTo(startWheel + deltaY * 6 * dragRatio);
+                isScrolling = true;
+            }
+        },
     });
+
+    function updateStartPosition(self) {
+        if (scrollTween.scrollTrigger.scroll() >= 0 && scrollTween.scrollTrigger.scroll() < fullWidth) {
+            self.startScroll = scrollTween.scrollTrigger.scroll();
+        }
+    }
 
     // First screen
     let firstScreen = document.querySelector('.homePageFirst');

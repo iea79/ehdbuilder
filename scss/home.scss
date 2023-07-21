@@ -50,8 +50,9 @@
 
     &__el {
         position: relative;
-        width: 100px;
-        height: 16px;
+        width: 6.25em;
+        height: 1em;
+        margin: 3.1em 0;
         &:before,
         &:after {
             content: '';
@@ -59,8 +60,8 @@
             width: 1em;
             height: 1em;
             border-radius: 50%;
-            background: #006083;
-            box-shadow: 2em 0 #006083;
+            background: #fff;
+            box-shadow: 2em 0 #fff;
             left: 0;
             top: 0;
             animation: ballMoveX 1s linear infinite;

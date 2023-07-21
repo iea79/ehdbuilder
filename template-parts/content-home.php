@@ -1,9 +1,9 @@
 <div class="loader">
-    <!-- <div class="loader__el"></div> -->
     <div class="loader__top">Building <br>homes and trust </div>
-    <div class="loader__img">
+    <div class="loader__el"></div>
+    <!-- <div class="loader__img">
         <img src="<?php echo get_template_directory_uri() . '/img/loader.png' ?>" alt="loading">
-    </div>
+    </div> -->
     <div class="loader__percent">0%</div>
     <script>
         let loaderInterval,
@@ -30,7 +30,15 @@
             <div class="homePageFirst__top">
                 <div class="homePageFirst__left">
                     <div class="homePageFirst__contact">
-                        <b>ehd</b> builders - enviromental <br>home development
+                        <div class="logo">
+                            <?php
+                            if (has_custom_logo()) {
+                                echo get_custom_logo();
+                            } else {
+                                echo '<b>ehd</b> builders - enviromental <br>home development';
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="homePageFirst__right">

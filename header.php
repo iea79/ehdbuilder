@@ -30,7 +30,24 @@
 		<header id="masthead" class="header">
 			<div class="header__row">
 				<div class="navbar__wrap">
+					<div class="navbar__wrapContacts">
+						<ul class="menu">
+							<li>
+								<a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><i class="icon_phone"></i></a>
+							</li>
+							<li>
+								<a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>"><i class="icon_mail"></i></a>
+							</li>
+						</ul>
+					</div>
 					<div class="navbar__toggle"></div>
+					<div class="navbar__wrapSoc">
+						<?php
+						wp_nav_menu([
+							'menu'	=> 'socials-menu'
+						])
+						?>
+					</div>
 				</div>
 				<div class="navbar">
 					<div class="navbar__toggle mobile"></div>
@@ -68,7 +85,19 @@
 				// if (!is_front_page()) {
 				?>
 				<div class="header__logo">
-					<div class="header__col"><a class="header__item" href="/"><b>ehd</b><span>builders - enviromental home development</span></a></div>
+					<div class="header__col">
+
+						<div class="logo">
+							<?php
+							if (has_custom_logo()) {
+								echo get_custom_logo();
+							} else {
+								echo '<a class="header__item" href="/"><b>ehd</b> builders - enviromental <br>home development</a>';
+							}
+							?>
+						</div>
+
+					</div>
 				</div>
 				<div class="header__content desktop">
 					<div class="header__col"><a class="header__item" href="tel:(866) 585-2717"><b>Phone:</b><span>(866) 585-2717</span></a><a class="header__item" href="mailto:info@ehdbuilders.com"><b>Email:</b><span>info@ehdbuilders.com</span></a></div>

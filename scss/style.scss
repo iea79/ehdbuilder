@@ -38,3 +38,15 @@
 @import 'vendor/swiper';
 
 // About
+
+.logo {
+    width: 8em;
+
+    @media (min-width: 768px) {
+        width: 14em;
+    }
+
+    img {
+        height: auto;
+    }
+}
