@@ -56,5 +56,43 @@
         &:first-child {
             margin-left: 0;
         }
+
+        @media (min-width: 768px) {
+            .menu {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 0.65em;
+
+                li {
+                    a {
+                        width: 2.625em;
+                        height: 2.625em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: #fff;
+                        border: 1px solid;
+                        border-radius: 50%;
+
+                        &:hover {
+                            background: #fff;
+                            color: #006083;
+                        }
+
+                        i {
+                            margin: 0;
+                        }
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

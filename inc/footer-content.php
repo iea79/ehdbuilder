@@ -53,7 +53,7 @@
 				<!-- </div> -->
 			</div>
 		</div>
-		<div class="footer__row"><a class="footer__link" href="#">Go back</a></div>
+		<div class="footer__row"><a class="footer__link goBack" href="#">Go back</a></div>
 	</div>
 </div>
 <div class="footer__bottom">

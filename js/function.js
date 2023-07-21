@@ -61,6 +61,10 @@ $(document).ready(function () {
     animateHeadImage();
 
     // stikyMenu();
+
+    document.querySelector('.goBack').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 });
 
 $(window).resize(function (event) {

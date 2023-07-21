@@ -1,6 +1,12 @@
+@import '../fonts/icon/variables';
+
 .blog {
     @media (min-width: 768px) {
         padding-bottom: 0;
+
+        &.section {
+            overflow: hidden;
+        }
     }
 
     &__cat {
@@ -330,7 +336,7 @@
                 transform: translateY(-44%);
                 right: -2.5em;
 
-                content: '\e905';
+                content: $icon_polygon;
                 font-family: 'icomoon';
                 font-weight: 400;
                 font-style: normal;
@@ -347,7 +353,7 @@
 
         &:before {
             display: inline-block;
-            content: '\e900';
+            content: $icon_clock;
             font-family: 'icomoon';
             font-size: 1.25em;
             margin-right: 0.5em;

@@ -104,6 +104,13 @@
 					<div class="header__col">
 						<div class="header__item"><b>Addres:</b><span>18375 Ventura Blvd. #122Tarzana, CA, 91356</span></div>
 					</div>
+					<div class="header__col desktop">
+						<?php
+						wp_nav_menu([
+							'menu'	=> 'socials-menu'
+						])
+						?>
+					</div>
 				</div>
 				<?php
 				// }

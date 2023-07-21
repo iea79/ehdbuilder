@@ -1,3 +1,5 @@
+@import '../fonts/icon/variables';
+
 .materials {
     .container_center {
         @media (min-width: 768px) {
@@ -19,7 +21,6 @@
         margin-top: 2em;
         @media (min-width: 768px) {
             margin-top: 5em;
-
         }
     }
 
@@ -65,7 +66,7 @@
             }
 
             &:before {
-                content: '\e90d';
+                content: $icon_plus;
                 font-family: 'icomoon';
 
                 position: absolute;
@@ -86,9 +87,7 @@
                 font-size: 0.65em;
                 @media (min-width: 768px) {
                     font-size: 0.875em;
-
                 }
-
             }
         }
     }
@@ -110,7 +109,6 @@
 
             @media (min-width: 768px) {
                 font-size: 1.375em;
-
             }
         }
     }
@@ -137,5 +135,4 @@
             width: 36.75em;
         }
     }
-
 }
