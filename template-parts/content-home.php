@@ -1,5 +1,6 @@
 <div class="loader">
-    <div class="loader__top">Building <br>homes and trust </div>
+    <div class="loader__top">From Vision <br>to Reality</div>
+    <!-- <div class="loader__top">Building <br>homes and trust </div> -->
     <div class="loader__el"></div>
     <!-- <div class="loader__img">
         <img src="<?php echo get_template_directory_uri() . '/img/loader.png' ?>" alt="loading">

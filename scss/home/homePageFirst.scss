@@ -66,7 +66,8 @@
             max-width: none;
 
             @media (min-width: 768px) {
-                object-position: right center;
+                object-position: left center;
+                // object-position: right center;
             }
         }
     }

@@ -156,44 +156,44 @@ function initHorizontalScroll() {
     let firstScreenImage = document.querySelector('.homePageFirst__image');
     let firstScreenImg = document.querySelector('.homePageFirst__image img');
 
-    gsap.fromTo(
-        firstScreenImage,
-        { width: firstScreenImageWidth },
-        {
-            width: window.innerWidth,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: firstScreen,
-                start: 'top top',
-                end: 'bottom top',
-                scrub: 1,
-                containerAnimation: scrollTween,
-                markers: false,
-                onToggle: (self) => {},
-            },
-            id: 'TeamSlider',
-        }
-    );
+    // gsap.fromTo(
+    //     firstScreenImage,
+    //     { width: firstScreenImageWidth },
+    //     {
+    //         width: window.innerWidth,
+    //         ease: 'none',
+    //         scrollTrigger: {
+    //             trigger: firstScreen,
+    //             start: 'top top',
+    //             end: 'bottom top',
+    //             scrub: 1,
+    //             containerAnimation: scrollTween,
+    //             markers: false,
+    //             onToggle: (self) => {},
+    //         },
+    //         id: 'TeamSlider',
+    //     }
+    // );
 
-    gsap.fromTo(
-        firstScreenImg,
-        { width: firstScreenImageWidth / 2 },
-        {
-            width: window.innerWidth,
-            height: window.innerHeight + 50,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: firstScreen,
-                start: '34% center',
-                end: 'bottom center',
-                scrub: 1,
-                containerAnimation: scrollTween,
-                markers: false,
-                onToggle: (self) => {},
-            },
-            id: 'firstScreenImage',
-        }
-    );
+    // gsap.fromTo(
+    //     firstScreenImg,
+    //     { width: firstScreenImageWidth / 2 },
+    //     {
+    //         width: window.innerWidth,
+    //         height: window.innerHeight + 50,
+    //         ease: 'none',
+    //         scrollTrigger: {
+    //             trigger: firstScreen,
+    //             start: '34% center',
+    //             end: 'bottom center',
+    //             scrub: 1,
+    //             containerAnimation: scrollTween,
+    //             markers: false,
+    //             onToggle: (self) => {},
+    //         },
+    //         id: 'firstScreenImage',
+    //     }
+    // );
 
     // Team
     let team = document.querySelector('.homePageTeam');
