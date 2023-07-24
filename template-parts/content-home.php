@@ -533,7 +533,7 @@
                         setup_postdata($post);
                 ?>
                         <div class="homePageBlog__item">
-                            <a href="<?php echo SCF::get('blog__btn_link'); ?>" class="homePageBlog__img">
+                            <a href="<?php the_permalink(); ?>" class="homePageBlog__img">
                                 <?php the_post_thumbnail() ?>
                             </a>
                             <div class="homePageBlog__descr">

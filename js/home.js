@@ -1,6 +1,13 @@
 let firstScreenImageWidth;
 
-disableNativeMouseWheel();
+function isMacintosh() {
+    return navigator.platform.indexOf('Mac') > -1;
+}
+
+console.log(isMacintosh());
+if (!isMacintosh()) {
+    disableNativeMouseWheel();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // console.log('isMobile', isXsWidth());
@@ -112,7 +119,8 @@ function initHorizontalScroll() {
     Observer.create({
         target: '.homePage',
         // type: 'wheel',
-        type: 'wheel,touch,pointer',
+        type: 'wheel,touch,scroll,pointer',
+        scrollSpeed: 0.5,
         onPress: (self) => {
             updateStartPosition(self);
         },
@@ -129,8 +137,9 @@ function initHorizontalScroll() {
         },
         onWheel: (self) => {
             const { deltaY } = self;
-            if (!isScrolling) {
-                scrollTo(startWheel + deltaY * 6 * dragRatio);
+            if (!isScrolling && !isMacintosh()) {
+                scrollTo(startWheel + deltaY * 4);
+                // scrollTo(startWheel + deltaY * 4 * dragRatio);
                 isScrolling = true;
             }
         },
