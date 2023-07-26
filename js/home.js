@@ -138,8 +138,7 @@ function initHorizontalScroll() {
         onWheel: (self) => {
             const { deltaY } = self;
             if (!isScrolling && !isMacintosh()) {
-                scrollTo(startWheel + deltaY * 4);
-                // scrollTo(startWheel + deltaY * 4 * dragRatio);
+                scrollTo(startWheel + deltaY * 5 * dragRatio);
                 isScrolling = true;
             }
         },

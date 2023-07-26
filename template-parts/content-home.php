@@ -45,10 +45,10 @@
                 <div class="homePageFirst__right">
                     <div class="homePageFirst__contact">
                         <div>
-                            <b>Phone:</b> <a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?></a>
+                            <b>Phone:</b> <a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>" aria-label="Phone <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?></a>
                         </div>
                         <div>
-                            <b>Email:</b> <a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>"><?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?></a>
+                            <b>Email:</b> <a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>" aria-label="Email <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>"><?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
                         }
                         ?>
                         <div class="homePageProjects__item">
-                            <a href="<?php echo $item['project__link'] ?>" target="_blank" class="homePageProjects__image">
+                            <a href="<?php echo $item['project__link'] ?>" target="_blank" class="homePageProjects__image" title="<?php the_title() ?>">
                                 <?php echo wp_get_attachment_image($item['project__img'], 'full') ?>
                             </a>
                             <div class="homePageProjects__bottom">
@@ -534,7 +534,7 @@
                         setup_postdata($post);
                 ?>
                         <div class="homePageBlog__item">
-                            <a href="<?php the_permalink(); ?>" class="homePageBlog__img">
+                            <a href="<?php the_permalink(); ?>" class="homePageBlog__img" title="<?php the_title() ?>">
                                 <?php the_post_thumbnail() ?>
                             </a>
                             <div class="homePageBlog__descr">

@@ -4,8 +4,8 @@
 			<div class="footer__label"><span>MAIN OFFICE</span></div>
 			<ul class="footer__list list">
 				<li><span><?php echo SCF::get_option_meta('our-contacts', 'contacts__addres'); ?></span></li>
-				<li><span>Phone: </span><a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?></a></li>
-				<li><a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>">Email: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?></a></li>
+				<li><span>Phone: </span><a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>" aria-label="Phone <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?></a></li>
+				<li><a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>" aria-label="Email <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>">Email: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?></a></li>
 			</ul>
 		</div>
 		<div class="footer__row">

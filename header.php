@@ -33,10 +33,10 @@
 					<div class="navbar__wrapContacts">
 						<ul class="menu">
 							<li>
-								<a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><i class="icon_phone"></i></a>
+								<a href="tel: <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>" aria-label="Phone <?php echo SCF::get_option_meta('our-contacts', 'contacts__tel'); ?>"><i class="icon_phone"></i></a>
 							</li>
 							<li>
-								<a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>"><i class="icon_mail"></i></a>
+								<a href="mailto: <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>" aria-label="Email <?php echo SCF::get_option_meta('our-contacts', 'contacts__email'); ?>"><i class="icon_mail"></i></a>
 							</li>
 						</ul>
 					</div>
