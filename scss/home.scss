@@ -15,6 +15,9 @@
 @import './home/homePageFaq';
 
 .loader {
+    // display: none;
+
+    // @media (min-width: 768px) {
     position: fixed;
     z-index: 101;
     top: 0;
@@ -73,6 +76,7 @@
             animation: rotateLoader 1s linear infinite;
         }
     }
+    // }
 }
 
 @keyframes rotateLoader {
