@@ -9,8 +9,13 @@
     }
 }
 
+#toplevel_page_edit-post_type-smart-custom-fields {
+    display: none;
+}
+
 .menu-edit {
-    input[id='menu'][value='5'] {
+    input[id='menu'][value='5'],
+    input[id='menu'][value='8'] {
         + #nav-menu-header {
             + #post-body {
                 .menu-icons-wrap {
